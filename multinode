@@ -1,0 +1,59 @@
+Create an EC2 instance with Amazon Linux or Ubuntu operating system.
+
+Connect to the EC2 instance using SSH and update the packages by running the command:
+
+sudo yum update -y (for Amazon Linux) or sudo apt-get update -y (for Ubuntu)
+
+Install Java 8 on the EC2 instance by running the command:
+sudo yum install java-1.8.0-openjdk (for Amazon Linux) or sudo apt-get install openjdk-8-jre (for Ubuntu)
+
+Add the Elasticsearch repository to the source list by running the command:
+sudo rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
+
+sudo vim /etc/yum.repos.d/elasticsearch.repo
+
+Add the following contents to the elasticsearch.repo file:
+[elasticsearch-7.x]
+name=Elasticsearch repository for 7.x packages
+baseurl=https://artifacts.elastic.co/packages/7.x/yum
+gpgcheck=1
+gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+enabled=1
+autorefresh=1
+type=rpm-md
+
+Install Elasticsearch by running the command:
+sudo yum install elasticsearch (for Amazon Linux) or sudo apt-get install elasticsearch (for Ubuntu)
+
+Start the Elasticsearch service by running the command:
+sudo systemctl start elasticsearch (for Amazon Linux) or sudo service elasticsearch start (for Ubuntu)
+
+Verify that Elasticsearch is running by accessing the URL http://instance_ip:9200.
+
+Install Logstash by running the command:
+
+sudo yum install logstash (for Amazon Linux) or sudo apt-get install logstash (for Ubuntu)
+
+Start the Logstash service by running the command:
+sudo systemctl start logstash (for Amazon Linux) or sudo service logstash start (for Ubuntu)
+
+Install Kibana by running the command:
+sudo yum install kibana (for Amazon Linux) or sudo apt-get install kibana (for Ubuntu)
+
+Start the Kibana service by running the command:
+sudo systemctl start kibana (for Amazon Linux) or sudo service kibana start (for Ubuntu)
+
+Verify that Kibana is running by accessing the URL http://instance_ip:5601.
+
+Create a Load Balancer and add the EC2 instance as a target.
+
+Update the Kibana configuration file to allow access from the Load Balancer IP.
+
+Create an Auto Scaling group and add the Load Balancer as a target.
+
+Update the Elasticsearch configuration file to allow access from the Auto Scaling group.
+
+Start the Auto Scaling group and verify that the ELK stack is working properly.
+
+
+
