@@ -1,0 +1,22 @@
+Dashboards: customizable visual representations of data in Kibana
+Visualizations: graphs, charts, and other visual representations of data in Kibana
+Data exploration: using Kibana to search and navigate through data stored in Elasticsearch
+Data analysis: using Kibana to analyze and visualize data stored in Elasticsearch
+Data aggregation: grouping data by common fields for analysis and reporting
+Data filtering: selecting specific data to include or exclude in visualizations and dashboards
+Data visualization: creating charts, graphs, and other visual representations of data in Kibana
+Data mapping: plotting data on maps to visualize geographic trends and patterns
+Data indexing: creating and managing indexes in Elasticsearch to store and access data in Kibana
+Data storage: using Elasticsearch to store and access data in Kibana
+Alerts: notifications triggered by specific data patterns or changes in Kibana
+Real-time data: visualizing data as it is being added to Elasticsearch in real-time
+Reports: pre-built or custom reports in Kibana based on data stored in Elasticsearch
+Search: searching data stored in Elasticsearch using search queries
+Saved objects: saving and reusing visualizations, dashboards, and other objects in Kibana
+Plugins: adding new functionality to Kibana through plugins
+Customization: using Kibana's advanced customization features to create unique and tailored data visualizations
+Sharing: sharing Kibana visualizations, dashboards, and other objects with others.
+Multi-tenancy: enabling multiple users to access and visualize different data sets within the same Kibana instance.
+Data security: ensuring the security and privacy of data accessed and visualized in Kibana.
+
+
